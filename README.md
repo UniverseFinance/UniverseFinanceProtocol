@@ -1,2 +1,2 @@
 # UniverseFinanceProtocol
-Universe Finance Smart Contract Protocol Project
+Universe Finance Smart Contract Protocol Project.
