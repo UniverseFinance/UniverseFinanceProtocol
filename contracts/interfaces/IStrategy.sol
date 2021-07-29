@@ -36,6 +36,6 @@ interface IStrategy {
     function stopMining(uint128, address) external returns(uint256, uint256);
 
     // Passive Reset Interval
-    function reBalance() external returns (uint256, uint256, int24, int24, bool);
+    function reBalance() external returns (uint256, uint256, int24, int24);
 
 }
