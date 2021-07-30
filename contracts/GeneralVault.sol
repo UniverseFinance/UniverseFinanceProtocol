@@ -132,6 +132,23 @@ contract GeneralVault is Ownable, ERC20, ReentrancyGuard {
         strategy.changeDirection(direction);
     }
 
+    function reBalance() external onlyOperator {
+        // ReBalance
+        (
+        uint256 feesFromPool0,
+        uint256 feesFromPool1,
+        int24 lowerTick,
+        int24 upperTick
+        ) = strategy.reBalance();
+        // EVENT
+        emit ReBalance(msg.sender, lowerTick, upperTick, 1);
+        emit CollectFees(msg.sender, feesFromPool0, feesFromPool1);
+        // before mining
+        _transferToStrategy();
+        // add liquidity
+        strategy.mining();
+    }
+
     /* ========== PURE ========== */
 
     function _toUint128(uint256 x) internal pure returns (uint128) {
@@ -340,23 +357,6 @@ contract GeneralVault is Ownable, ERC20, ReentrancyGuard {
         amount1 = baseAmount1.add(unusedAmount1);
         // EVENT
         emit Withdraw(msg.sender, share, amount0, amount1, reserveShare);
-    }
-
-    function reBalance() external {
-        // ReBalance
-        (
-        uint256 feesFromPool0,
-        uint256 feesFromPool1,
-        int24 lowerTick,
-        int24 upperTick
-        ) = strategy.reBalance();
-        // EVENT
-        emit ReBalance(msg.sender, lowerTick, upperTick, 1);
-        emit CollectFees(msg.sender, feesFromPool0, feesFromPool1);
-        // before mining
-        _transferToStrategy();
-        // add liquidity
-        strategy.mining();
     }
 
     function reInvest() external {
