@@ -321,7 +321,8 @@ contract GeneralVault is Ownable, ERC20, ReentrancyGuard {
         _transferToStrategy();
         // mint
         _mint(msg.sender, share);
-        emit Deposit(msg.sender, share, amount0, amount1);
+        (uint256 actual0, uint256 actual1) = calBalance(share);
+        emit Deposit(msg.sender, share, amount0, amount1, actual0, actual1);
         // add Liquidity
         strategy.mining();
     }
@@ -380,7 +381,9 @@ contract GeneralVault is Ownable, ERC20, ReentrancyGuard {
         address indexed sender,
         uint256 share,
         uint256 amount0,
-        uint256 amount1
+        uint256 amount1,
+        uint256 actual0,
+        uint256 actual1
     );
 
     event Withdraw(
