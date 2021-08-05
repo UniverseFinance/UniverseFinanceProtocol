@@ -457,14 +457,14 @@ contract SingleIntervalStrategy is IStrategy, Ownable {
         return _burnLiquidity(pool, liq, to);
     }
 
-    function reBalance() external override returns (uint256, uint256, int24, int24) {
+    function reBalance() external override returns (bool, uint256, uint256, int24, int24) {
         // Check status
         Config storage config = configs[msg.sender];
         // get Pool
         IUniswapV3Pool pool = IUniswapV3Pool(config.uniswapLp);
         // get New Ticks
         (bool status , int24 lowerTick, int24 upperTick) = _getReBalanceTicks(pool, config);
-        require(status, "reBalance status is False!");
+        if (!status) {return (status, 0, 0, lowerTick, upperTick);}
         // get Position info
         Position storage position = positions[msg.sender];
         // Burn All
@@ -474,7 +474,7 @@ contract SingleIntervalStrategy is IStrategy, Ownable {
         // update position
         position.lowerTick = lowerTick;
         position.upperTick = upperTick;
-        return (feesFromPool0, feesFromPool1, lowerTick, upperTick);
+        return (status, feesFromPool0, feesFromPool1, lowerTick, upperTick);
     }
 
     function collectCommission(
