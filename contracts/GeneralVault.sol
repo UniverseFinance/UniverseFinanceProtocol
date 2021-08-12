@@ -68,12 +68,6 @@ contract GeneralVault is Ownable, ERC20, ReentrancyGuard {
         operator = _operator;
     }
 
-    function changeStrategy(IStrategy _strategy) external onlyOwner {
-        require(totalSupply() == 0, "not empty!");
-        strategy.removeConfig();
-        strategy = _strategy;
-    }
-
     function register(
         int24 boundaryThreshold,
         int24 reBalanceThreshold,
@@ -324,10 +318,10 @@ contract GeneralVault is Ownable, ERC20, ReentrancyGuard {
         _transferToStrategy();
         // mint
         _mint(msg.sender, share);
-        (uint256 actual0, uint256 actual1) = calBalance(share);
-        emit Deposit(msg.sender, share, amount0, amount1, actual0, actual1);
         // add Liquidity
         strategy.mining();
+        (uint256 actual0, uint256 actual1) = calBalance(share);
+        emit Deposit(msg.sender, share, amount0, amount1, actual0, actual1);
     }
 
     function withdraw(uint256 share) external nonReentrant returns (uint256 amount0, uint256 amount1) {
