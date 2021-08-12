@@ -56,6 +56,11 @@ contract GeneralVault is Ownable, ERC20, ReentrancyGuard {
         _;
     }
 
+    modifier onlyEOA {
+        require(msg.sender == tx.origin, "only EOA!");
+        _;
+    }
+
     /* ========== ONLY OWNER ========== */
 
     function changeDev(address _dev) external onlyOwner {
@@ -299,7 +304,7 @@ contract GeneralVault is Ownable, ERC20, ReentrancyGuard {
         uint256 amount1,
         uint256 amount0Min,
         uint256 amount1Min
-    ) external nonReentrant {
+    ) external onlyEOA nonReentrant {
         // Check
         require(canDeposit, "CAN NOT DEPOSIT!");
         require(amount0 >= amount0Min, "amount0Min");
@@ -327,7 +332,7 @@ contract GeneralVault is Ownable, ERC20, ReentrancyGuard {
         emit CollectFees(msg.sender, feesFromPool0, feesFromPool1, total0, total1, _currentTick());
     }
 
-    function withdraw(uint256 share) external nonReentrant returns (uint256 amount0, uint256 amount1) {
+    function withdraw(uint256 share) external onlyEOA nonReentrant returns (uint256 amount0, uint256 amount1) {
         // Check
         require(share > 0, "zero Share");
         // record & burn
