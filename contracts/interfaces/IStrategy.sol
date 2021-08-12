@@ -11,9 +11,6 @@ interface IStrategy {
     // change config
     function changeConfig(bytes calldata data) external;
 
-    // remove config
-    function removeConfig() external;
-
     // change direction
     function changeDirection(uint8) external;
 
@@ -36,6 +33,6 @@ interface IStrategy {
     function stopMining(uint128, address) external returns(uint256, uint256);
 
     // Passive Reset Interval
-    function reBalance() external returns (uint256, uint256, int24, int24);
+    function reBalance() external returns (bool, uint256, uint256, int24, int24);
 
 }
