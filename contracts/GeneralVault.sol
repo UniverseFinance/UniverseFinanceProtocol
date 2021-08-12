@@ -138,13 +138,14 @@ contract GeneralVault is Ownable, ERC20, ReentrancyGuard {
         int24 upperTick
         ) = strategy.reBalance();
         if (status) {
-            // EVENT
-            emit ReBalance(msg.sender, lowerTick, upperTick, 1);
-            emit CollectFees(msg.sender, feesFromPool0, feesFromPool1);
             // before mining
             _transferToStrategy();
             // add liquidity
             strategy.mining();
+            // EVENT
+            ( , uint256 total0, uint256 total1) = getTotalAmounts();
+            emit ReBalance(msg.sender, lowerTick, upperTick, total0, total1);
+            emit CollectFees(msg.sender, feesFromPool0, feesFromPool1, total0, total1, _currentTick());
         }
     }
 
@@ -163,16 +164,10 @@ contract GeneralVault is Ownable, ERC20, ReentrancyGuard {
         uint256 priceX96
     ) internal pure returns (uint256) {
         // 0.3% penalty for unBalanced part
-        if (amount1Desired.mul(total0) == amount0Desired.mul(total1)) {
-            if (total0 == 0) {
-                amount0Desired = amount0Desired.mul(997).div(1000);
-            } else if (total1 == 0) {
-                amount1Desired = amount1Desired.mul(997).div(1000);
-            }
-        } else if (amount1Desired.mul(total0) > amount0Desired.mul(total1)) {
+        if (amount1Desired.mul(total0) > amount0Desired.mul(total1)) {
             uint256 diff = (amount1Desired.mul(total0) - amount0Desired.mul(total1)).mul(3).div(total0).div(1000);
             amount1Desired = amount1Desired.sub(diff);
-        } else {
+        } else if (amount1Desired.mul(total0) < amount0Desired.mul(total1)) {
             uint256 diff = (amount0Desired.mul(total1) - amount1Desired.mul(total0)).mul(3).div(total1).div(1000);
             amount0Desired = amount0Desired.sub(diff);
         }
@@ -269,6 +264,10 @@ contract GeneralVault is Ownable, ERC20, ReentrancyGuard {
 
     /* ========== INTERNAL ========== */
 
+    function _currentTick() internal view returns (int24 tick) {
+        ( , tick, , , , , ) = pool.slot0();
+    }
+
     function _transferToStrategy() internal {
         if (_balance0() > reinvestMin0) {
             token0.safeTransfer(address(strategy), _balance0());
@@ -283,7 +282,8 @@ contract GeneralVault is Ownable, ERC20, ReentrancyGuard {
         updateCommission();
         // collect
         (uint256 feesFromPool0, uint256 feesFromPool1) = strategy.collectCommission(pool, address(this));
-        emit CollectFees(msg.sender, feesFromPool0, feesFromPool1);
+        ( , uint256 total0, uint256 total1) = getTotalAmounts();
+        emit CollectFees(msg.sender, feesFromPool0, feesFromPool1, total0, total1, _currentTick());
     }
 
     /* ========== PUBLIC ========== */
@@ -312,7 +312,6 @@ contract GeneralVault is Ownable, ERC20, ReentrancyGuard {
         require(share > 0, "share equal to zero!");
         // Harvest
         (uint256 feesFromPool0, uint256 feesFromPool1) = strategy.collectCommission(pool, address(0));
-        emit CollectFees(msg.sender, feesFromPool0, feesFromPool1);
         // transfer
         if (amount0 > 0) token0.safeTransferFrom(msg.sender, address(strategy), amount0);
         if (amount1 > 0) token1.safeTransferFrom(msg.sender, address(strategy), amount1);
@@ -323,7 +322,9 @@ contract GeneralVault is Ownable, ERC20, ReentrancyGuard {
         // add Liquidity
         strategy.mining();
         (uint256 actual0, uint256 actual1) = calBalance(share);
-        emit Deposit(msg.sender, share, amount0, amount1, actual0, actual1);
+        emit Deposit(msg.sender, address(this), share, amount0, amount1, actual0, actual1, _currentTick());
+        ( , uint256 total0, uint256 total1) = getTotalAmounts();
+        emit CollectFees(msg.sender, feesFromPool0, feesFromPool1, total0, total1, _currentTick());
     }
 
     function withdraw(uint256 share) external nonReentrant returns (uint256 amount0, uint256 amount1) {
@@ -356,7 +357,7 @@ contract GeneralVault is Ownable, ERC20, ReentrancyGuard {
         amount0 = baseAmount0.add(unusedAmount0);
         amount1 = baseAmount1.add(unusedAmount1);
         // EVENT
-        emit Withdraw(msg.sender, share, amount0, amount1, reserveShare);
+        emit Withdraw(msg.sender, address(this), share, amount0, amount1, reserveShare, _currentTick());
     }
 
     function reInvest() external {
@@ -365,13 +366,14 @@ contract GeneralVault is Ownable, ERC20, ReentrancyGuard {
         updateCommission();
         // collect
         (uint256 feesFromPool0, uint256 feesFromPool1) = strategy.collectCommission(pool, address(0));
-        // EVENT
-        emit CollectFees(msg.sender, feesFromPool0, feesFromPool1);
-        emit ReBalance(msg.sender, 0, 0, 0);
         // before mining
         _transferToStrategy();
         // add liquidity
         strategy.mining();
+        // EVENT
+        ( , uint256 total0, uint256 total1) = getTotalAmounts();
+        emit CollectFees(msg.sender, feesFromPool0, feesFromPool1, total0, total1, _currentTick());
+        emit ReInvest(msg.sender, 0, 0, total0, total1);
     }
 
     /* ========== EVENT ========== */
@@ -389,33 +391,49 @@ contract GeneralVault is Ownable, ERC20, ReentrancyGuard {
     );
 
     event Deposit(
-        address indexed sender,
+        address indexed user,
+        address vault,
         uint256 share,
         uint256 amount0,
         uint256 amount1,
         uint256 actual0,
-        uint256 actual1
+        uint256 actual1,
+        int24 currentTick
     );
 
     event Withdraw(
-        address indexed sender,
+        address indexed user,
+        address vault,
         uint256 share,
         uint256 amount0,
         uint256 amount1,
-        uint256 reserveShare
+        uint256 reserveShare,
+        int24 currentTick
     );
 
     event CollectFees(
         address indexed sender,
         uint256 feesFromPool0,
-        uint256 feesFromPool1
+        uint256 feesFromPool1,
+        uint256 total0,
+        uint256 total1,
+        int24 currentTick
     );
 
     event ReBalance(
         address indexed sender,
         int24 lowerTick,
         int24 upperTick,
-        uint8 mark
+        uint256 total0,
+        uint256 total1
+    );
+
+    event ReInvest(
+        address indexed sender,
+        int24 lowerTick,
+        int24 upperTick,
+        uint256 amount0,
+        uint256 amount1
     );
 
 }
