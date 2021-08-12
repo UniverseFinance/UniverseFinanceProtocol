@@ -406,7 +406,7 @@ contract SingleIntervalStrategy is IStrategy, Ownable {
 
     /* ========== EXTERNAL ========== */
 
-    function mining() external override {
+    function mining() external override onlyWhiteList {
         // check config
         Config memory config = configs[msg.sender];
         // get Pool
