@@ -54,7 +54,7 @@ contract SingleIntervalStrategy is IStrategy, Ownable {
     /* ========== MODIFIERS ========== */
 
     modifier onlyWhiteList {
-        require(whiteLists[msg.sender] == true, "onlyWhiteList Vault");
+        require(whiteLists[msg.sender], "onlyWhiteList Vault");
         _;
     }
 
