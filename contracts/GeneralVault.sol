@@ -60,11 +60,13 @@ contract GeneralVault is Ownable, ERC20, ReentrancyGuard {
 
     function changeDev(address _dev) external onlyOwner {
         require(_dev != address(0), "invalid address");
+        emit ChangeDev(msg.sender, dev, _dev);
         dev = _dev;
     }
 
     function changeOperator(address _operator) external onlyOwner {
         require(_operator != address(0), "invalid address");
+        emit ChangeOperator(msg.sender, operator, _operator);
         operator = _operator;
     }
 
@@ -373,6 +375,18 @@ contract GeneralVault is Ownable, ERC20, ReentrancyGuard {
     }
 
     /* ========== EVENT ========== */
+
+    event ChangeDev(
+        address indexed sender,
+        address oldDev,
+        address newDev
+    );
+
+    event ChangeOperator(
+        address indexed sender,
+        address oldOperator,
+        address newOperator
+    );
 
     event Deposit(
         address indexed sender,
