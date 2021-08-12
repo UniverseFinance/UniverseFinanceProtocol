@@ -112,24 +112,6 @@ contract SingleIntervalStrategy is IStrategy, Ownable {
         config.isSwap = isSwap;
     }
 
-    function removeConfig() external override onlyWhiteList {
-        // Check status
-        Config storage config = configs[msg.sender];
-        address lpAddress = config.uniswapLp;
-        require(lpAddress != address(0), "have no config!");
-        // get position
-        Position storage position = positions[msg.sender];
-        if (position.isInit) {
-            updateCommission(IUniswapV3Pool(lpAddress));
-            (uint128 liquidity, uint256 amount0, uint256 amount1) = getTotalAmounts();
-            require(liquidity == 0 && amount0 == 0 && amount1 == 0, "not empty!");
-        }
-        // change Status
-        config.uniswapLp = address(0);
-        position.isInit = false;
-        occupyStatus[lpAddress] = false;
-    }
-
     function changeDirection(uint8 direction) external override onlyWhiteList {
         // Check status
         Config storage config = configs[msg.sender];
