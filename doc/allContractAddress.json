@@ -1,0 +1,43 @@
+{
+  "Vaults": [
+    {
+      "name": "EarlyBird",
+      "alis": "GeneralVault",
+      "address": "0x39a88389ae0a307b9e4041d8778c8bf1ebcd54d6",
+      "token0": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "token1": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "deployedBlock": 13016390,
+      "type": 1
+    },
+    {
+      "name": "Team Vault",
+      "alis": "PrivateVault",
+      "address": "0xe6505575a49d904aea01bb8452c94eb393ee74e0",
+      "token0": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "token1": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "deployedBlock": 13015260,
+      "type": 1
+    },
+    {
+      "name": "Single Vault",
+      "alis": "UniverseVaultV3",
+      "address": "0x09Fb2F78bc8B08372B260a3e7ceba009E89C05D7",
+      "token0": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "token1": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "deployedBlock": 13651695,
+      "type": 1
+    },
+  ],
+  "Resolver": [
+    {
+      "name": "Universe Resolver",
+      "alis": "Universe address resolver",
+      "address": "0x7466420dc366df67b55daedf19f8d37a346fa7c8",
+      "deployedBlock": 13669323,
+      "type": 2
+    }
+
+  ]
+  
+
+}
