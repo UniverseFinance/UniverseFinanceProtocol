@@ -38,6 +38,14 @@
     }
 
   ]
+  "adapter": [{
+      "name": "Universe adapter",
+      "alis": "Universe vault adapter",
+      "address": "0x876861ad49f911442720cf97c9b3fce4070f07d5",
+      "deployedBlock": 13670610,
+      "type": 3
+    }
+  ]
   
 
 }
