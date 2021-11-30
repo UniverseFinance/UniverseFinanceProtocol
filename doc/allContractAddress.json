@@ -45,8 +45,7 @@
       "deployedBlock": 13669323,
       "type": 2
     }
-
-  ]
+  ],
   "adapter": [{
       "name": "Universe adapter",
       "alis": "Universe vault adapter",
@@ -54,7 +53,22 @@
       "deployedBlock": 13670610,
       "type": 3
     }
+  ],
+  "instadapp": [
+    {
+      "name": "insta resolver",
+      "alis": "ResolverV2UniverseFinance",
+      "address": "0xa7963898453c00b61cff8ce7e5b28c4e8bf1348f",
+      "deployedBlock": 13714128,
+      "type": 4
+    },
+    {
+      "name": "insta connector",
+      "alis": "ConnectV2UniverseFinance",
+      "address": "0xd7a7296623c56f884b0a753ebd6653911f3986ca",
+      "deployedBlock": 13714156,
+      "type": 4
+    }
   ]
-  
 
 }
