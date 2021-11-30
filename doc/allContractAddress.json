@@ -19,12 +19,21 @@
       "type": 1
     },
     {
-      "name": "Single Vault",
-      "alis": "UniverseVaultV3",
+      "name": "Single Vault 1",
+      "alis": "USDC-WETH-3000",
       "address": "0x09Fb2F78bc8B08372B260a3e7ceba009E89C05D7",
       "token0": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
       "token1": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
       "deployedBlock": 13651695,
+      "type": 1
+    },
+    {
+      "name": "Single Vault 2",
+      "alis": "WBTC-WETH-3000",
+      "address": "0xf2abc2f772c2fe96ec064369287bda007c6d39d6",
+      "token0": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+      "token1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+      "deployedBlock": 13681694,
       "type": 1
     },
   ],
