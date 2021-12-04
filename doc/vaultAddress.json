@@ -108,7 +108,7 @@
         "stateMutability": "view",
         "type": "function"
       },      
-      "type": 1
+      "type": 2
     },
     {
       "name": "Single Vault 1",
@@ -155,7 +155,7 @@
         "stateMutability": "view",
         "type": "function"
       }, 
-      "type": 1
+      "type": 2
     },
     {
       "name": "Single Vault 2",
@@ -202,6 +202,6 @@
         "stateMutability": "view",
         "type": "function"
       },  
-      "type": 1
+      "type": 2
     }
   ]
