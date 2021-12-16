@@ -28,7 +28,7 @@
       "type": 1
     },
     {
-      "name": "Single Vault 1",
+      "name": "Single Vault stage 1",
       "alis": "USDC-WETH-3000",
       "address": "0x5ec191a7fd4ccc4f1369c2a6281e95aaf0ae9d8d",
       "token0": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
@@ -37,12 +37,39 @@
       "type": 1
     },
     {
-      "name": "Single Vault 2",
+      "name": "Single Vault stage 2",
       "alis": "WBTC-WETH-3000",
       "address": "0xf2abc2f772c2fe96ec064369287bda007c6d39d6",
       "token0": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
       "token1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
       "deployedBlock": 13681694,
+      "type": 1
+    },
+    {
+      "name": "Single Vault 1",
+      "alis": "USDC-WETH-3000",
+      "address": "0xa2d62728cc10b256abb1aa908a6559f85095bded",
+      "token0": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "token1": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "deployedBlock": 13813868,
+      "type": 1
+    },
+    {
+      "name": "Single Vault 2",
+      "alis": "WETH-USDT-3000",
+      "address": "0xc91b65fd40820f33b71c56bc00f80e1ac49ea98e",
+      "token0": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+      "token1": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+      "deployedBlock": 13813876,
+      "type": 1
+    },
+    {
+      "name": "Single Vault 3",
+      "alis": "WBTC-WETH-3000",
+      "address": "0xfe2d02baea49adb7b56e6b4c719ef449ddab2831",
+      "token0": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+      "token1": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "deployedBlock": 13813955,
       "type": 1
     }
   ],
