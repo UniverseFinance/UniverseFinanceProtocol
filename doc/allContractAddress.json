@@ -90,6 +90,14 @@
       "type": 3
     }
   ],
+  "other": [{
+      "name": "Universe staking",
+      "alis": "staking",
+      "address": "0x2e382bd5b063f7e23dca9e7b7a9c90c0eeabbda5",
+      "deployedBlock": 13814777,
+      "type": 5
+    }
+  ],
   "instadapp": [
     {
       "name": "insta resolver",
