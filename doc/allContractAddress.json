@@ -96,6 +96,13 @@
       "address": "0x2e382bd5b063f7e23dca9e7b7a9c90c0eeabbda5",
       "deployedBlock": 13814777,
       "type": 5
+    },
+    {
+      "name": "Universe migrate",
+      "alis": "vault migrate",
+      "address": "0x02d72ef71359a5cc9cd688fbf3ac1d04268f0995",
+      "deployedBlock": 13814777,
+      "type": 6
     }
   ],
   "instadapp": [
