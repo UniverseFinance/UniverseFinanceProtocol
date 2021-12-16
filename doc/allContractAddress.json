@@ -71,6 +71,15 @@
       "token1": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
       "deployedBlock": 13813955,
       "type": 1
+    },
+    {
+      "name": "Single Vault 4",
+      "alis": "INST-WETH-3000",
+      "address": "0xcd3db2dca0602e3e3edab3e4af959254f1f8ad37",
+      "token0": "0x6f40d4a6237c257fff2db00fa0510deeecd303eb",
+      "token1": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "deployedBlock": 13815773,
+      "type": 1
     }
   ],
   "Resolver": [
