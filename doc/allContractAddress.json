@@ -80,6 +80,15 @@
       "token1": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
       "deployedBlock": 13815773,
       "type": 1
+    },
+    {
+      "name": "Single Vault 5",
+      "alis": "gOHM-WETH-3000",
+      "address": "0x60cb32549a81fadf9ca9d30dc6bf260ae0937e6b",
+      "token0": "0x0ab87046fbb341d058f17cbc4c1133f25a20a52f",
+      "token1": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "deployedBlock": 13820977,
+      "type": 1
     }
   ],
   "Resolver": [
