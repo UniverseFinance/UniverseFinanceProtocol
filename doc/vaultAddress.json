@@ -400,5 +400,53 @@
       "type": "function"
     },
     "type": 2
+  },
+  {
+    "name": "Single Vault 8",
+    "alis": "gOHM-WETH-3000",
+    "address": "0x60cb32549a81fadf9ca9d30dc6bf260ae0937e6b",
+    "token0": "0x0ab87046fbb341d058f17cbc4c1133f25a20a52f",
+    "token1": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+    "deployedBlock": 13820977,
+    "amountIndex": 0,
+    "getTotalAmounts": {
+      "inputs": [],
+      "name": "getTotalAmounts",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "total0",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "total1",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "free0",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "free1",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "utilizationRate0",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "utilizationRate1",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    "type": 2
   }
 ]
