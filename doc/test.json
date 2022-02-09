@@ -507,5 +507,397 @@
     },
     "type": 2,
     "chain": "polygon"
+  },
+  {
+    "name": "Single Vault 137002",
+    "alis": "USDC-WETH-3000",
+    "address": "0x64383674803cBB8c9f5A3A9A4dE8f8FAd6B1c61D",
+    "token0": "0x2791bca1f2de4661ed88a30c99a7a9449aa84174",
+    "token1": "0x7ceb23fd6bc0add59e62ac25578270cff1b9f619",
+    "deployedBlock": 23704322,
+    "amountIndex": 0,
+    "getTotalAmounts": {
+      "inputs": [],
+      "name": "getTotalAmounts",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "total0",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "total1",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "free0",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "free1",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "utilizationRate0",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "utilizationRate1",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    "type": 2,
+    "chain": "polygon"
+  },
+  {
+    "name": "Single Vault 137003",
+    "alis": "USDC-USDT-500",
+    "address": "0x0B0f53a122C6d7Fd63E3f200f334bfa73d6150DD",
+    "token0": "0x2791bca1f2de4661ed88a30c99a7a9449aa84174",
+    "token1": "0xc2132d05d31c914a87c6611c10748aeb04b58e8f",
+    "deployedBlock": 23704409,
+    "amountIndex": 0,
+    "getTotalAmounts": {
+      "inputs": [],
+      "name": "getTotalAmounts",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "total0",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "total1",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "free0",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "free1",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "utilizationRate0",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "utilizationRate1",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    "type": 2,
+    "chain": "polygon"
+  },
+  {
+    "name": "Single Vault 137004",
+    "alis": "MATIC-WETH-500",
+    "address": "0x215ebF3A9207146A396BD1c1f4220A014c0aD9b3",
+    "token0": "0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270",
+    "token1": "0x7ceb23fd6bc0add59e62ac25578270cff1b9f619",
+    "deployedBlock": 23701786,
+    "amountIndex": 0,
+    "getTotalAmounts": {
+      "inputs": [],
+      "name": "getTotalAmounts",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "total0",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "total1",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "free0",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "free1",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "utilizationRate0",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "utilizationRate1",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    "type": 2,
+    "chain": "polygon"
+  },
+  {
+    "name": "Single Vault 137005",
+    "alis": "MATIC-USDC-3000",
+    "address": "0xcB50D4d8026f42AC49Ce52BfD31305E0158DFD1D",
+    "token0": "0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270",
+    "token1": "0x2791bca1f2de4661ed88a30c99a7a9449aa84174",
+    "deployedBlock": 23704503,
+    "amountIndex": 0,
+    "getTotalAmounts": {
+      "inputs": [],
+      "name": "getTotalAmounts",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "total0",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "total1",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "free0",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "free1",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "utilizationRate0",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "utilizationRate1",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    "type": 2,
+    "chain": "polygon"
+  },
+  {
+    "name": "Single Vault 137006",
+    "alis": "MATIC-USDT-500",
+    "address": "0x856415bc7Ed93882f75515Bcd9F678992eE419FD",
+    "token0": "0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270",
+    "token1": "0xc2132d05d31c914a87c6611c10748aeb04b58e8f",
+    "deployedBlock": 23702690,
+    "amountIndex": 0,
+    "getTotalAmounts": {
+      "inputs": [],
+      "name": "getTotalAmounts",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "total0",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "total1",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "free0",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "free1",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "utilizationRate0",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "utilizationRate1",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    "type": 2,
+    "chain": "polygon"
+  },
+  {
+    "name": "Single Vault 137007",
+    "alis": "WBTC-WETH-500",
+    "address": "0x8936C3cF79D380304a5B9d8c069D4fFdc05E7480",
+    "token0": "0x1bfd67037b42cf73acf2047067bd4f2c47d9bfd6",
+    "token1": "0x7ceb23fd6bc0add59e62ac25578270cff1b9f619",
+    "deployedBlock": 23704855,
+    "amountIndex": 0,
+    "getTotalAmounts": {
+      "inputs": [],
+      "name": "getTotalAmounts",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "total0",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "total1",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "free0",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "free1",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "utilizationRate0",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "utilizationRate1",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    "type": 2,
+    "chain": "polygon"
+  },
+  {
+    "name": "Single Vault 137008",
+    "alis": "MATIC-USDC-500",
+    "address": "0xcA08F0D8Fe14d40b4379A9Ad441AA73c02e89E08",
+    "token0": "0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270",
+    "token1": "0x2791bca1f2de4661ed88a30c99a7a9449aa84174",
+    "deployedBlock": 23703200,
+    "amountIndex": 0,
+    "getTotalAmounts": {
+      "inputs": [],
+      "name": "getTotalAmounts",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "total0",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "total1",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "free0",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "free1",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "utilizationRate0",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "utilizationRate1",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    "type": 2,
+    "chain": "polygon"
+  },
+  {
+    "name": "Single Vault 137008",
+    "alis": "USDC-WETH-500",
+    "address": "0xe2faB133e7f0705646f5CD7cF12a04A3485F9429",
+    "token0": "0x2791bca1f2de4661ed88a30c99a7a9449aa84174",
+    "token1": "0x7ceb23fd6bc0add59e62ac25578270cff1b9f619",
+    "deployedBlock": 23696602,
+    "amountIndex": 0,
+    "getTotalAmounts": {
+      "inputs": [],
+      "name": "getTotalAmounts",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "total0",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "total1",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "free0",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "free1",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "utilizationRate0",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "utilizationRate1",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    "type": 2,
+    "chain": "polygon"
   }
 ]
