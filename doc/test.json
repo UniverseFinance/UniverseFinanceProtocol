@@ -31,7 +31,7 @@
       "type": "function"
     },
     "type": 1,
-    "chainId": 1
+    "chain": "ethereum"
   },
   {
     "name": "Team Vault",
@@ -65,7 +65,7 @@
       "type": "function"
     },
     "type": 1,
-    "chainId": 1
+    "chain": "ethereum"
   },
   {
     "name": "Single Vault Test",
@@ -114,7 +114,7 @@
       "type": "function"
     },
     "type": 2,
-    "chainId": 1
+    "chain": "ethereum"
   },
   {
     "name": "Single Vault 1",
@@ -163,7 +163,7 @@
       "type": "function"
     },
     "type": 2,
-    "chainId": 1
+    "chain": "ethereum"
   },
   {
     "name": "Single Vault 2",
@@ -212,7 +212,7 @@
       "type": "function"
     },
     "type": 2,
-    "chainId": 1
+    "chain": "ethereum"
   },
   {
     "name": "Single Vault 3",
@@ -261,7 +261,7 @@
       "type": "function"
     },
     "type": 2,
-    "chainId": 1
+    "chain": "ethereum"
   },
   {
     "name": "Single Vault 5",
@@ -310,7 +310,7 @@
       "type": "function"
     },
     "type": 2,
-    "chainId": 1
+    "chain": "ethereum"
   },
   {
     "name": "Single Vault 6",
@@ -359,7 +359,7 @@
       "type": "function"
     },
     "type": 2,
-    "chainId": 1
+    "chain": "ethereum"
   },
   {
     "name": "Single Vault 7",
@@ -408,7 +408,7 @@
       "type": "function"
     },
     "type": 2,
-    "chainId": 1
+    "chain": "ethereum"
   },
   {
     "name": "Single Vault 8",
@@ -457,7 +457,7 @@
       "type": "function"
     },
     "type": 2,
-    "chainId": 1
+    "chain": "ethereum"
   },
     {
     "name": "Single Vault 137001",
@@ -506,6 +506,6 @@
       "type": "function"
     },
     "type": 2,
-    "chainId": 137
+    "chain": "polygon"
   }
 ]
