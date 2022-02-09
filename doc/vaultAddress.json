@@ -30,7 +30,8 @@
       "stateMutability": "view",
       "type": "function"
     },
-    "type": 1
+    "type": 1,
+    "chain": "ethereum"
   },
   {
     "name": "Team Vault",
@@ -63,7 +64,8 @@
       "stateMutability": "view",
       "type": "function"
     },
-    "type": 1
+    "type": 1,
+    "chain": "ethereum"
   },
   {
     "name": "Single Vault Test",
@@ -111,7 +113,8 @@
       "stateMutability": "view",
       "type": "function"
     },
-    "type": 2
+    "type": 2,
+    "chain": "ethereum"
   },
   {
     "name": "Single Vault 1",
@@ -159,7 +162,8 @@
       "stateMutability": "view",
       "type": "function"
     },
-    "type": 2
+    "type": 2,
+    "chain": "ethereum"
   },
   {
     "name": "Single Vault 2",
@@ -207,7 +211,8 @@
       "stateMutability": "view",
       "type": "function"
     },
-    "type": 2
+    "type": 2,
+    "chain": "ethereum"
   },
   {
     "name": "Single Vault 3",
@@ -255,7 +260,8 @@
       "stateMutability": "view",
       "type": "function"
     },
-    "type": 2
+    "type": 2,
+    "chain": "ethereum"
   },
   {
     "name": "Single Vault 5",
@@ -303,7 +309,8 @@
       "stateMutability": "view",
       "type": "function"
     },
-    "type": 2
+    "type": 2,
+    "chain": "ethereum"
   },
   {
     "name": "Single Vault 6",
@@ -351,7 +358,8 @@
       "stateMutability": "view",
       "type": "function"
     },
-    "type": 2
+    "type": 2,
+    "chain": "ethereum"
   },
   {
     "name": "Single Vault 7",
@@ -399,7 +407,8 @@
       "stateMutability": "view",
       "type": "function"
     },
-    "type": 2
+    "type": 2,
+    "chain": "ethereum"
   },
   {
     "name": "Single Vault 8",
@@ -447,6 +456,7 @@
       "stateMutability": "view",
       "type": "function"
     },
-    "type": 2
+    "type": 2,
+    "chain": "ethereum"
   }
 ]
